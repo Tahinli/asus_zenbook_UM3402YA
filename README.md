@@ -19,6 +19,8 @@
 * Update grub config
 
   ```sudo update-grub```
+* or 
+  ```sudo grub-mkconfig -o /boot/grub/grub.cfg```
 
 ### References
 * https://wiki.archlinux.org/title/ASUS_Zenbook_UM3402YA
