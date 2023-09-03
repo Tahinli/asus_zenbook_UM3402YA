@@ -2,6 +2,7 @@
 
 * Kernel Sürümünüz 6.2 ve üzeri olmalı.
 * Gerekirse ssdt-csc3551.dsl dosyası düzenlenebilir.
+* Secure-Boot ayarını BIOS üzerinden kapatmayı gerektirebilir.
 
 * Öncelikle dsl çıktısını derlemek için "acpica-tools" a ihtiyacımız var.
 
