@@ -35,4 +35,4 @@
 * https://gist.github.com/lamperez/d5b385bc0c0c04928211e297a69f32d7
 * https://gist.github.com/lamperez/862763881c0e1c812392b5574727f6ff
 * https://gist.github.com/masselstine/8fe9634b4c31cef07b8dfab089e4eb38
-* https://github.com/thor2002ro/asus_zenbook_ux3402za
+* https://github.com/thor2002ro/asus_zenbook_ux3402za (UX3402ZA dst dosyası için bu arkadaşa bakabilirsiniz, adımlar aynı şekilde uygulanabilir)
