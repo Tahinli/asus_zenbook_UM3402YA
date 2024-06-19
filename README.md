@@ -1,12 +1,26 @@
 # Asus Zenbook UM3402YA Linux Ses Sorunu Çözümü
 
+## 6.8 KERNEL İLE BİRLİKTE BUNA İHTİYAÇ KALMADI, 6.8 VE DAHA ÜZERİ İÇİN HİÇBİR ŞEY YAPMANIZA GEREK YOK
+> Detaylar:
+
+> https://lore.kernel.org/all/1435594585.650325975.1707867511062.JavaMail.zimbra@free.fr/
+
+> https://wiki.archlinux.org/title/ASUS_Zenbook_UM3402YA
+
+## 6.8 VEYA ÜZERİ KERNEL KULLANAMIYORSANIZ AŞAĞIDAKİ ADIMLARLA YAMAYI UYGULAYABİLİRSİNİZ
+
 * Kernel Sürümünüz 6.2 ve üzeri olmalı.
 * Gerekirse ssdt-csc3551.dsl dosyası düzenlenebilir.
 * Secure-Boot ayarını BIOS üzerinden kapatmayı gerektirebilir.
 
 * Öncelikle dsl çıktısını derlemek için "acpica-tools" a ihtiyacımız var.
 
-  ```sudo apt install acpica-tools```
+  APT kullanan dağıtımlar için: ```sudo apt install acpica-tools```
+  
+  DNF kullanan dağıtımlar için: ```sudo dnf install acpica-tools```
+
+  PACMAN kullanan dağıtımlar için: ```sudo pacman -S acpica```
+  
 * Devamında dosyayı indirdiğiniz klasöre gidip aşağıdaki kodu çalıştırın.
 * Bu kod dsl dosyamızı aml uzantılı dosyaya derleyecektir.
   
@@ -27,8 +41,15 @@
 
   ```sudo update-grub```
 * Ubuntu temelli olmayan sistemlerde ```update-grub``` olmayabilir onun yerine aşağıdakini kullanabilirsiniz.
+* Fedora / RHEL temelli dağıtımlar için ( teşekkürler @effepi0 )
 
-  ```sudo grub-mkconfig -o /boot/grub/grub.cfg```
+    ```sudo grub2-mkconfig -o /etc/grub2.cfg```
+
+    ```sudo grub2-mkconfig -o /etc/grub2-efi.cfg```
+
+* Arch temelli dağıtımlar için ( teşekkürler @kelna )
+
+    ```grub-mkconfig -o /boot/grub/grub.cfg``` (sudo yetkisi gerekebilir)
 
 ### Kaynakça
 * https://github.com/farfaaa/asus_zenbook_UM3402YA -Original Repo- (Really Appreciate My Friend, Thanks a Lot)
